@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    public float movespeed = 5f;
-    public float JumpForce = 10f;
-    public LayerMask Tanah;
+    public float moveSpeed = 5f;
+    public float jumpForce = 10f;
+    public Transform groundCheck;
+    public float groundDistance = 0.2f;
+    public LayerMask groundMask;
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -15,23 +17,31 @@ public class Move : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
     }
 
     void Update()
     {
-        rb.velocity = new Vector2(movespeed, rb.velocity.y);
+        float x = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(x * moveSpeed, rb.velocity.y);
 
-        isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 1f, Tanah);
-        if(input.GetKeyDown(KeyCode.UpArrow) &&isGrounded)
+        
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundDistance, groundMask);
+
+        
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            anim.SetTrigger("Jump");
         }
+        float y = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(x * moveSpeed, rb.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundDistance, groundMask);
+
+        
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            anim.SetTrigger("Slide");
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
     }
 }
