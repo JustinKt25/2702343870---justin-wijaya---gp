@@ -46,12 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacle: {fileID: 1923298366202282647}
-  maxX: 0
-  minX: 0
-  maxY: 0
-  minY: 0
-  timeBetweenSpawn: 0
-  SpawnTime: 0
+  maxX: 5
+  minX: -5
+  maxY: 4
+  minY: -4
+  timeBetweenSpawn: 0.2
 --- !u!1 &2798259550221030219
 GameObject:
   m_ObjectHideFlags: 0
@@ -77,9 +76,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2798259550221030219}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 166, y: 194, z: 6.267578}
-  m_LocalScale: {x: 650, y: 650, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -18, y: 505, z: 0}
+  m_LocalScale: {x: 600, y: 600, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5064066377721396607}
