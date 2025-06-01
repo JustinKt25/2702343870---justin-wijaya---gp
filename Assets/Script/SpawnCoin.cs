@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class SpawnCoin : MonoBehaviour
 {
-    public GameObject obstacle;
+    public GameObject Coin;
     public float maxX;
     public float minX;
     public float maxY;
     public float minY;
     public float timeBetweenSpawn;
-    private float SpawnTime;
+    private float NextSpawnTime;
 
     
     void Update()
     {
-        if(Time.time > SpawnTime)
+        if(Time.time > NextSpawnTime)
         {
             spawn();
-            SpawnTime = Time.time + timeBetweenSpawn;
+            NextSpawnTime = Time.time + timeBetweenSpawn;
         }
     }
 
@@ -27,7 +27,7 @@ public class SpawnCoin : MonoBehaviour
         float randomX = Random.Range(minX, maxX);
         float randomY = Random.Range(minY, maxY);
 
-        Instantiate(obstacle, transform.position + new Vector3(randomX, randomY, 0), transform.rotation);
+        Instantiate(Coin, transform.position + new Vector3(randomX, randomY, 0), transform.rotation);
     }
 }
 
