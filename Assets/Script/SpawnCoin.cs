@@ -10,15 +10,15 @@ public class SpawnCoin : MonoBehaviour
     public float maxY;
     public float minY;
     public float timeBetweenSpawn;
-    public float SpawnTime;
+    public float nextSpawnTime;
 
     
     void Update()
     {
-        if(Time.time > SpawnTime)
+        if(Time.time > nextSpawnTime)
         {
             spawn();
-            SpawnTime = Time.time + timeBetweenSpawn;
+            nextSpawnTime = Time.time + timeBetweenSpawn;
         }
     }
 
