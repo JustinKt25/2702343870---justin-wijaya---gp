@@ -17,17 +17,20 @@ public class SpawnCoin : MonoBehaviour
     {
         if(Time.time > NextSpawnTime)
         {
-            spawn();
+            Spawn();
             NextSpawnTime = Time.time + timeBetweenSpawn;
         }
     }
 
-    void spawn()
+    void Spawn()
     {
         float randomX = Random.Range(minX, maxX);
         float randomY = Random.Range(minY, maxY);
 
-        Instantiate(Coin, transform.position + new Vector3(randomX, randomY, 0), transform.rotation);
+        Vector3 spawnPos = new Vector3(randomX, randomY, 0f);
+        Instantiate(Coin, spawnPos, Quaternion.identity);
+
+        Debug.Log("Coin spawned at: " + spawnPos);
     }
 }
 
