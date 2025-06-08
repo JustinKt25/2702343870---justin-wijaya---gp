@@ -24,6 +24,12 @@ public class SpawnCoin : MonoBehaviour
 
     void Spawn()
     {
+        if(Coin == null)
+        {
+            Coin = GetComponent<GameObject>();
+            return;
+        }
+
         float randomX = Random.Range(minX, maxX);
         float randomY = Random.Range(minY, maxY);
 
