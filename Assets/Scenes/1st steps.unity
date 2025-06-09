@@ -1457,10 +1457,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Coin: {fileID: 1923298366202282647, guid: 1a81cea138ac3f14dbcd34208badc6a3, type: 3}
-  maxX: -4
-  minX: 4
-  maxY: -3
-  minY: 3
+  maxX: 200
+  minX: 1000
+  maxY: 100
+  minY: 30
   timeBetweenSpawn: 1.5
 --- !u!4 &1608369412
 Transform:
