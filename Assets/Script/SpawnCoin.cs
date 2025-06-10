@@ -26,14 +26,14 @@ public class SpawnCoin : MonoBehaviour
     {
         if(Coin == null)
         {
-            Coin = GetComponent<GameObject>();
+            Debug.LogWarning("Prefab Coin belum di-assign di Inspector!");
             return;
         }
 
         float randomX = Random.Range(minX, maxX);
         float randomY = Random.Range(minY, maxY);
 
-        Vector3 spawnPos = new Vector3(randomX, randomY, 0f);
+        Vector3 spawnPos = new(randomX, randomY, 0f);
         Instantiate(Coin, spawnPos, Quaternion.identity);
 
         Debug.Log("Coin spawned at: " + spawnPos);
