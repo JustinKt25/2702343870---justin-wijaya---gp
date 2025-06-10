@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a0b8497081819e4195016e70d29fada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraspeed: 17
+  cameraspeed: 50
 --- !u!4 &101623804
 Transform:
   m_ObjectHideFlags: 0
@@ -899,7 +899,7 @@ Transform:
   m_GameObject: {fileID: 1058850496}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1077, y: 267, z: 0}
+  m_LocalPosition: {x: -800, y: 267, z: 0}
   m_LocalScale: {x: 10, y: 750, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1586,7 +1586,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 97c52affc1a595442b81b3ed17a60326, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.708
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1734,7 +1734,7 @@ MonoBehaviour:
   minX: 220
   maxY: 66
   minY: -160
-  timeBetweenSpawn: 4.5
+  timeBetweenSpawn: 3
 --- !u!1 &1970841927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,7 +1767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a403c48a93e93647a1ec007e7b36ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 18
+  playerSpeed: 30
 --- !u!61 &1970841929
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1901,7 +1901,7 @@ Transform:
   m_GameObject: {fileID: 1970841927}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -257, y: 152, z: 0}
+  m_LocalPosition: {x: -1, y: 109, z: 0}
   m_LocalScale: {x: 400, y: 400, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
